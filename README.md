@@ -11,7 +11,7 @@ This project is a study about mongoDb.
 
 ## WebConfigChecker
 
-This project check if a .Net project has all Keys on web.config.
-I Create this project because, When I worked to decompose a service into micro services,
-Some keys of the original project have been forgotten on the new project. 
-Then this project list which keys not exists.
+This project checks if a .NET project has all keys on web.config.
+I created this project because when I worked to decompose a service into microservices
+some keys of the original project were forgotten in the new one.
+So this project lists which keys do not exist.
