@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotoFacil", "LotoFacil\LotoFacil.csproj", "{5957A3FC-0473-42AF-91DB-1412E8E9546C}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lotofacil.Infrastructure", "Lotofacil.Infrastructure\Lotofacil.Infrastructure.csproj", "{DC590663-75E6-418C-8A57-1C24F20F1B55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotoFacil.Business", "LotoFacil.Business\LotoFacil.Business.csproj", "{74BA1127-0C5E-40C0-8879-283E0BCA9D85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{FAEC67C4-A59C-4810-B0A9-0A31A2BF3FC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +41,15 @@ Global
 		{74BA1127-0C5E-40C0-8879-283E0BCA9D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74BA1127-0C5E-40C0-8879-283E0BCA9D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74BA1127-0C5E-40C0-8879-283E0BCA9D85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAEC67C4-A59C-4810-B0A9-0A31A2BF3FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAEC67C4-A59C-4810-B0A9-0A31A2BF3FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAEC67C4-A59C-4810-B0A9-0A31A2BF3FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAEC67C4-A59C-4810-B0A9-0A31A2BF3FC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5329AAC8-F108-4BA8-A526-0F6F199E6E51}
 	EndGlobalSection
 EndGlobal

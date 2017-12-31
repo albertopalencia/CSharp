@@ -12,20 +12,20 @@ namespace LotoFacil.Business
         {
             LotoFacilRepository repository = new LotoFacilRepository();
 
-            List<GameResult> resultList = new List<GameResult>();
+            List<LotofacilProxyModel> resultList = new List<LotofacilProxyModel>();
 
             List<Ten> tenList = Ten.CreateTenList();
 
             resultList.Add(repository.GetResultGame());
 
-            int lastNumberGame = resultList.FirstOrDefault().GameNumber;
+            int lastNumberGame = resultList.FirstOrDefault().numero;
 
             for (int i = lastNumberGame - 9; i < lastNumberGame; i++)
             {
                 resultList.Add(repository.GetResultGame(i));
             }
 
-            OrderResults(tenList, resultList);
+            OrderResults(ref tenList, resultList);
 
             var TenFixed = getTenFixe(tenList);
 
@@ -47,17 +47,17 @@ namespace LotoFacil.Business
             return result;
         }
 
-        private void OrderResults(List<Ten> tenList, List<GameResult> gameResultList)
+        private void OrderResults(ref List<Ten> tenList, List<LotofacilProxyModel> gameResultList)
         {
             foreach (var result in gameResultList)
             {
-                foreach (var ten in result.TenList)
+                foreach (var ten in result.sorteio)
                 {
                     tenList.FirstOrDefault(d => d.Number == ten).Qty++;
                 }
             }
 
-            tenList.OrderByDescending(t => t.Qty);
+            tenList = tenList.OrderByDescending(t => t.Qty).ToList();
         }
 
         private List<int> getTenFixe(List<Ten> tenList)

@@ -6,22 +6,22 @@ namespace LotoFacil.Data
 {
     public class LotoFacilRepository
     {
-        private string url = @"https://confiraloterias.com.br/api/json/?loteria=lotofacil&token=HExddhWwRlbUViV";
+        private const string BASE_URL = @"https://www.lotodicas.com.br/api/lotofacil";
 
-        public GameResult GetResultGame(int? gameNumber = null)
+        public LotofacilProxyModel GetResultGame(int? gameNumber = null)
         {
-            ResultLotoFacil result = new ResultLotoFacil();
+            var url = BASE_URL;
 
-            if(gameNumber != null)
+            if (gameNumber != null)
             {
-                url += "&concurso=" + gameNumber;
+                url += "/" + gameNumber;
             }
 
             string json = RequestHelper.HttpGet(url);
 
-            result = JsonConvert.DeserializeObject<ResultLotoFacil>(json);
+            var result = JsonConvert.DeserializeObject<LotofacilProxyModel>(json);
 
-            return result.GameResult;
+            return result;
         }
     }
 }

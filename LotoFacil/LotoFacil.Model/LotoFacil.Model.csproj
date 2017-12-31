@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lotofacil\GameResult.cs" />
+    <Compile Include="Lotofacil\LotofacilProxyModel.cs" />
     <Compile Include="Lotofacil\Ten.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lotofacil\ResultLotoFacil.cs" />
